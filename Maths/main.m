@@ -7,12 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AdditionQuestion.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
     
         char inputChar[255];
         do{
+            
+            AdditionQuestion *randomMath = [[AdditionQuestion alloc] init];
+            NSLog(@"%@", randomMath.question);
+            
             fgets(inputChar, 255, stdin);
             NSString *inputString = [NSString stringWithCString:inputChar encoding:NSUTF8StringEncoding];
             NSCharacterSet *newLineChar = [NSCharacterSet whitespaceAndNewlineCharacterSet];
