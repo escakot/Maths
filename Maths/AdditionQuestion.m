@@ -14,10 +14,10 @@
 {
     self = [super init];
     if (self) {
-        int randomNumber = arc4random_uniform(50);
-        int secondRandomNumber = arc4random_uniform(50);
+        int randomNumber = arc4random_uniform(90) + 10;
+        int secondRandomNumber = arc4random_uniform(90) + 10;
         _answer = randomNumber + secondRandomNumber;
-        _question = [NSString stringWithFormat:@"What is %i + %i?\n",randomNumber, secondRandomNumber];
+        _question = [NSString stringWithFormat:@"What is %i + %i? Type 'quit' to exit\n",randomNumber, secondRandomNumber];
     }
     return self;
 }
