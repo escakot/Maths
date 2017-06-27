@@ -10,8 +10,16 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+    
+        char inputChar[255];
+        do{
+            fgets(inputChar, 255, stdin);
+            NSString *inputString = [NSString stringWithCString:inputChar encoding:NSUTF8StringEncoding];
+            NSCharacterSet *newLineChar = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+            NSString *cleanString = [inputString stringByTrimmingCharactersInSet:newLineChar];
+            
+            NSLog(@"%@", cleanString);
+        }while(YES);
     }
     return 0;
 }

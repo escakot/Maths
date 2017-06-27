@@ -248,6 +248,7 @@
 				D100B8031F02B643004AE014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
