@@ -17,7 +17,7 @@
         int randomNumber = arc4random_uniform(50);
         int secondRandomNumber = arc4random_uniform(50);
         _answer = randomNumber + secondRandomNumber;
-        _question = [NSString stringWithFormat:@"What is %i + %i",randomNumber, secondRandomNumber];
+        _question = [NSString stringWithFormat:@"What is %i + %i?\n",randomNumber, secondRandomNumber];
     }
     return self;
 }
