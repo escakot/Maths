@@ -21,8 +21,8 @@
 
 - (NSString*) timeOutput{
     NSTimeInterval averageTime = 0;
-    AdditionQuestion *lastAnswered = [self.questions lastObject];
-    for (AdditionQuestion *question in self.questions) {
+    Question *lastAnswered = [self.questions lastObject];
+    for (Question *question in self.questions) {
         averageTime = averageTime + question.answerTime;
     }
     averageTime = averageTime/self.questions.count;

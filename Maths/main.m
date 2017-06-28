@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AdditionQuestion.h"
+#import "Question.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
         QuestionManager *questionManager = [[QuestionManager alloc] init];
         do{
             
-            AdditionQuestion *randomMath = [[AdditionQuestion alloc] init];
+            Question *randomMath = [[Question alloc] init];
             [questionManager.questions addObject:randomMath];
             NSLog(@"%@", randomMath.question);
            

@@ -1,13 +1,13 @@
 //
-//  AdditionQuestion.h
+//  SubtractionQuestion.m
 //  Maths
 //
 //  Created by Errol Cheong on 2017-06-28.
 //  Copyright © 2017 Errol Cheong. All rights reserved.
 //
 
-#import "Question.h"
+#import "SubtractionQuestion.h"
 
-@interface AdditionQuestion : Question
+@implementation SubtractionQuestion
 
 @end
