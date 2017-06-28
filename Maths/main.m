@@ -10,6 +10,7 @@
 #import "AdditionQuestion.h"
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
+#import "QuestionManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -18,22 +19,27 @@ int main(int argc, const char * argv[]) {
         NSLog(@"MATHS!");
         
         ScoreKeeper *myScore = [[ScoreKeeper alloc] init];
+        QuestionManager *questionManager = [[QuestionManager alloc] init];
         do{
             
             AdditionQuestion *randomMath = [[AdditionQuestion alloc] init];
+            [questionManager.questions addObject:randomMath];
             NSLog(@"%@", randomMath.question);
            
             NSString *answerString = [InputHandler obtainInput];
             
-            if (answerString.integerValue == randomMath.answer) {
-                myScore.right++;
-                NSLog(@"Right!");
-            } else if ([answerString isEqualToString:@"quit"]) {
+            if ([answerString isEqualToString:@"quit"]) {
                 [myScore readScore];
                 runProg = NO;
             } else {
-                myScore.wrong++;
-                NSLog(@"Wrong!");
+                if (answerString.integerValue == randomMath.answer) {
+                    myScore.right++;
+                    NSLog(@"Right!");
+                } else {
+                    myScore.wrong++;
+                    NSLog(@"Wrong!");
+                }
+                NSLog(@"%@" ,questionManager.timeOutput);
             }
         }while(runProg);
     }
