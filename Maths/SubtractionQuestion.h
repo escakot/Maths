@@ -10,4 +10,6 @@
 
 @interface SubtractionQuestion : Question
 
+- (void) generateQuestion;
+
 @end

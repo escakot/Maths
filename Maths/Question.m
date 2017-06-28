@@ -21,8 +21,6 @@
         //Randomize math question
         _rightValue = arc4random_uniform(90) + 10;
         _leftValue = arc4random_uniform(90) + 10;
-        _answer = _rightValue + _leftValue;
-        _question = [NSString stringWithFormat:@"%li + %li? Type 'quit' to exit\n",_rightValue, _leftValue];
     }
     return self;
 }
@@ -37,8 +35,6 @@
     return [self.endTime timeIntervalSinceDate:self.startTime];
 }
 
-- (void) generateQuestion {
-    
-}
+- (void) generateQuestion {}
 
 @end

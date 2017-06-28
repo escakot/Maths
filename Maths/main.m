@@ -11,18 +11,22 @@
 #import "InputHandler.h"
 #import "ScoreKeeper.h"
 #import "QuestionManager.h"
+#import "QuestionFactory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
     
         BOOL runProg = YES;
-        NSLog(@"MATHS!");
+        NSLog(@"MATHS!\n");
         
         ScoreKeeper *myScore = [[ScoreKeeper alloc] init];
         QuestionManager *questionManager = [[QuestionManager alloc] init];
+        QuestionFactory *questionFactory = [[QuestionFactory alloc] init];
+        
         do{
-            
-            Question *randomMath = [[Question alloc] init];
+           
+            Question *randomMath = [questionFactory generateRandomQuestion];
+           
             [questionManager.questions addObject:randomMath];
             NSLog(@"%@", randomMath.question);
            

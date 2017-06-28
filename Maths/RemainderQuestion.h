@@ -8,6 +8,8 @@
 
 #import "Question.h"
 
-@interface DivisionQuestion : Question
+@interface RemainderQuestion : Question
+
+- (void) generateQuestion;
 
 @end

@@ -10,4 +10,6 @@
 
 @interface MultiplicationQuestion : Question
 
+- (void) generateQuestion;
+
 @end
